@@ -1,0 +1,89 @@
+
+<head>
+  <title>stripe</title>
+</head>
+
+<body>
+  {{> bulletin}}
+  {{> paymentform}}
+</body>
+
+<template name="paymentform">
+  <h1>Meteor / Stripe Crowdfunder</h1>
+
+<div id="stripe-form">
+  <h2>Shipping Address</h2>
+   <div class="form-row">
+     <div class="cc-text">Name</div>
+     <input type="text" size="40" autocomplete="off" class="buyer-name"/>
+   </div>
+   <div class="form-row">
+     <div class="cc-text">Address 1</div>
+     <input type="text" size="40" autocomplete="off" class="address-1"/>
+   </div>
+   <div class="form-row">
+     <div class="cc-text">Address 2</div>
+     <input type="text" size="40" autocomplete="off" class="address-2"/>
+   </div>
+   <div class="form-row">
+     <div class="cc-text">City</div>
+     <input type="text" size="40" autocomplete="off" class="city"/>
+   </div>
+   <div class="form-row">
+     <div class="cc-text">State</div>
+     <input type="text" size="2" autocomplete="off" class="state"/>
+   </div>
+   <div class="form-row">
+     <div class="cc-text">Zip Code</div>
+     <input type="text" size="10" autocomplete="off" class="zip"/>
+   </div>
+
+
+
+
+   <h2>Card info</h2>
+    <div class="form-row">
+      <div class="cc-text">Card Number</div>
+      <input type="text" size="30" autocomplete="off" class="card-number"/>
+    </div>
+    <div class="form-row">
+      <div class="cc-text">CVC</div>
+      <input type="text" size="4" autocomplete="off" class="card-cvc"/>
+    </div>
+    <div class="form-row">
+    </div>
+    <div class="form-row">
+      <div class="cc-text">Expiration (MM/YYYY)</div>
+      <input type="text" size="2" class="card-expiry-month"/>
+      <span> / </span>
+      <input type="text" size="4" class="card-expiry-year"/>
+    </div>
+    <input type="hidden" name="amount" value="2000" id="cc-amount">
+    <button type="submit" class="submit-button">Submit Payment</button>
+</div>
+<div id="error" class="hidden"></div>
+<div id="success" class="hidden">Thanks for signing up at the open source crowdfunder!</div>
+</template>
+
+<template name="bulletin">
+  <p>Reserve a fully assembled <a href="http://www.shapeoko.com/wiki/index.php/Main_Page" target="_blank">open source hardware CNC m$
+<p>$600</p>
+  {{#each entries}}
+    {{> entry}}
+  {{/each}}
+  <p>Raised ${{total}} of $30000</p>
+</template>
+
+<template name="entry">
+  <div class="entry" style="border: 1px solid black">
+    <span class="entry-price">$600</span>
+    <span class="entry-name">{{name}}</span>
+    <span class="entry-address-1">{{address_1}}</span>
+    <span class="entry-address-2">{{address_2}}</span>
+    <span class="entry-city">{{city}}</span>
+    <span class="entry-state">{{state}}</span>
+    <span class="entry-zip">{{zip}}</span>
+    <span class="entry-id">{{_id}}</span>
+  </div>
+</template>
+
