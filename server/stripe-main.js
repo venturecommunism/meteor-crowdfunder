@@ -6,7 +6,7 @@ Meteor.methods({
   savetoken: function (token_id, name, address_1, address_2, city, state, zip) {
     var timestamp = (new Date()).getTime();
 //console.log("token id is " + token_id);
-Tokens.insert({"token_id": token_id, "name": name, "address_1": address_1, "address_2": address_2, "city": city, "zip": zip, "timest$
+Tokens.insert({"token_id": token_id, "name": name, "address_1": address_1, "address_2": address_2, "city": city, "zip": zip, "timestamp": timestamp, "email": email });
   }
 });
 
