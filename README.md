@@ -38,7 +38,7 @@ mrt add stripe
 
 mrt add router
 
-mrt -port 80&
+mrt&
 
 (follow the instructions for meteor or meteorite for moving from staging to a live site)
 (you must do the "meteor add force-ssl" command to be PCI compliant)
