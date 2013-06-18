@@ -10,6 +10,8 @@ curl https://install.meteor.com | sh
 
 apt-get install -y npm
 
+curl https://raw.github.com/creationix/nvm/master/install.sh | sh
+
 npm install -g meteorite
 
 git clone https://github.com/venturecommunism/meteor-crowdfunder.git
