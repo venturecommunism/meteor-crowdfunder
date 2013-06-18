@@ -14,6 +14,12 @@ curl https://raw.github.com/creationix/nvm/master/install.sh | sh
 
 (close and reopen your terminal or the next command will fail)
 
+nvm install 0.8
+
+nvm alias default 0.8
+
+nvm use 0.8
+
 npm install -g meteorite
 
 git clone https://github.com/venturecommunism/meteor-crowdfunder.git
