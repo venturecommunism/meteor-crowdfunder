@@ -6,6 +6,10 @@ Meteor.js crowdfunding platform built on Stripe.js
 Installation
 ==================
 
+curl https://install.meteor.com | sh
+
+npm install -g meteorite
+
 git clone https://github.com/venturecommunism/meteor-crowdfunder.git
 
 cd meteor-crowdfunder
