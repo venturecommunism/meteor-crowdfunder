@@ -22,15 +22,26 @@ nvm use 0.8
 
 npm install -g meteorite
 
+
+
 git clone https://github.com/venturecommunism/meteor-crowdfunder.git
 
-cd meteor-crowdfunder
+mrt create yourapp
 
-mrt install stripe
+cd yourapp
 
-mrt install router
+cp ../meteor-crowdfunder/* .
 
-mrt&
+mrt add force-ssl
+
+mrt add stripe
+
+mrt add router
+
+mrt -port 80&
+
+(follow the instructions for meteor or meteorite for moving from staging to a live site)
+(you must do the "meteor add force-ssl" command to be PCI compliant)
 
 It should now be running on port 3000. For now deploy to Heroku for SSL certificate. Instructions on how to proxy with Nginx coming soon. This will only be PCI compliant while running on SSL. Otherwise you may use only the test API keys and fake credit card numbers like 424242424242 but not the live API keys.
 
