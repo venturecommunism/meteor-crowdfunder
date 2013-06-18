@@ -8,6 +8,8 @@ Installation
 
 curl https://install.meteor.com | sh
 
+apt-get install -y npm
+
 npm install -g meteorite
 
 git clone https://github.com/venturecommunism/meteor-crowdfunder.git
