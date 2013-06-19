@@ -38,6 +38,10 @@ mrt add stripe
 
 mrt add router
 
+mrt remove autopublish
+
+mrt remove insecure
+
 mrt&
 
 (follow the instructions for meteor or meteorite for moving from staging to a live site)
